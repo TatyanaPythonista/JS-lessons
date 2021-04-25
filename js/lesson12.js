@@ -11,4 +11,9 @@ let car = {
     }
 };
 
-car.go() // dspsdf.
+car.go() // вызываю метод
+
+// добавляю метод в объект
+car.stop = function () {
+    console.log('Машина остановлена');
+}
