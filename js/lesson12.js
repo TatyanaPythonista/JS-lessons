@@ -48,6 +48,21 @@ console.log( car1.getModel() );
 console.log( car2.getModel() );
 
 function getModel () {
-    return this.model;
+    return this.model; // this определяется динамически 
 }
+
+// особеность this
+
+let bike2 = {
+    model: 'Olimpic',
+    getModel2() {
+        return this.model
+    }
+};
+
+let get = bike2.model;
+
+console.log(bike2.getModel2());
+console.log(get()); // при таком способе вызове метода возникает ошибка. переменная get находится вне объекта
+// this не определен
 
