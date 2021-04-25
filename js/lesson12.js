@@ -24,12 +24,30 @@ car.stop();
 let bike = {
     model: "Olimpic",
     color: 'pink',
-    go: function (driverName) {
+    go: function (driverName) { // можно убрать function и : по новым стандартам
         console.log('Водитель ' + driverName + ': машина едет')
     },
     stop: function () {
         console.log('Машина остановлена');
+    },
+    getModel() {
+        return this.model; // что вернуть свойство(атрибут) надо добавить this.
     }
 };
 
 bike.go('Тимур');
+console.log(bike.getModel());
+
+let car1 = {model: 'toyota'};
+let car2 = {model: 'opel'};
+
+car1.getModel = getModel;
+car2.getModel = getModel;
+
+console.log( car1.getModel() );
+console.log( car2.getModel() );
+
+function getModel () {
+    return this.model;
+}
+
