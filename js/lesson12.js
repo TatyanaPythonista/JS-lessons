@@ -11,9 +11,25 @@ let car = {
     }
 };
 
-car.go() // вызываю метод
+car.go(); // вызываю метод
 
 // добавляю метод в объект
 car.stop = function () {
     console.log('Машина остановлена');
 }
+
+car.stop();
+
+// передача аргументов методам
+let bike = {
+    model: "Olimpic",
+    color: 'pink',
+    go: function (driverName) {
+        console.log('Водитель ' + driverName + ': машина едет')
+    },
+    stop: function () {
+        console.log('Машина остановлена');
+    }
+};
+
+bike.go('Тимур');
