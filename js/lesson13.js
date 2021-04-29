@@ -78,3 +78,18 @@ let car = new function() {
 
 car.go();
 console.log( car );
+
+// Функция конструктор может быть вызвана и без оператора new, но тело функции необходимо скорректировать
+// Пример
+
+function Book2(title, author, price) {
+    if(new.target == undefined)  // если вызвали без new
+        return new Book2(title, author, price); // добавляем new автоматически
+    this.title = title;
+    this.author = author;
+    this.price = price;
+}
+
+let book4 = Book2('Онегин', 'Пушкин', 300);
+console.log( book4 );
+
