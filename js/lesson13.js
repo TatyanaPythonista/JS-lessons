@@ -88,8 +88,10 @@ function Book2(title, author, price) {
     this.title = title;
     this.author = author;
     this.price = price;
+    // если я здесь напишу return 111, вернется все равно объект, а не 111
 }
 
 let book4 = Book2('Онегин', 'Пушкин', 300);
 console.log( book4 );
+// но лучше явно использовать new, потому что это легче читать
 
