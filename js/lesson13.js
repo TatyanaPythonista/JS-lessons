@@ -69,4 +69,12 @@ console.log( book3 );
 
 // Можно использовать анонимные функции в качестве конструктора. Пример:
 
+let car = new function() {
+    this.model = 'reno';
+    this.go = function() {
+        console.log("Машина едет");
+    }
+}
 
+car.go();
+console.log( car );
