@@ -64,4 +64,15 @@ for(let j=0; j<fruits.length; ++j) {
     fruits[j] = "Peach";
     console.log( fruits[j] );
 }
-    
+
+// Методы массива push - добавляет элемент и pop - удаляет последний элемент
+
+let family = ['Tanya', 'Misha', 'cat'];
+family.push('Timur');
+console.log( family );
+
+let animals = ['Зебра', 'Обезьяна', 'Петух', 'Корова']
+
+let delAnim = animals.pop();
+console.log( delAnim );
+console.log( animals );
