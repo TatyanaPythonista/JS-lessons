@@ -88,3 +88,31 @@ console.log(animals);
 // Стек - последний вошел, первый вышел - push и pop
 // Стек работает быстрее, т.к в FIFO надо менять индексы
 
+// Двумерные массивы
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+console.log( matrix[1][1] );
+
+// чтобы перебрать все элементы двумерного массива, надо использовать цикл for of 
+
+for(let row of matrix) {
+    let cols = '';
+    for(let val of row)
+        cols += val + ' ';
+
+    console.log(cols);
+};
+
+// или через перебор индексов
+
+for(let q=0; q < matrix.length; ++q) {
+    let cols2 = '';
+    for(let w=0; w < matrix[q].length; ++w)
+        cols2 += matrix[q][w] + ' ';
+
+    console.log(cols2);
+};
