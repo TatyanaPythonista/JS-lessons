@@ -71,8 +71,14 @@ let family = ['Tanya', 'Misha', 'cat'];
 family.push('Timur');
 console.log( family );
 
-let animals = ['Зебра', 'Обезьяна', 'Петух', 'Корова']
+let animals = ['Зебра', 'Обезьяна', 'Петух', 'Корова'];
 
 let delAnim = animals.pop();
 console.log( delAnim );
 console.log( animals );
+
+// методы shift - удаляем и unshift - добавляем первый элемент массива
+let shiftAnim = animals.shift(); // индексы сдвигаются и сптруктура массива не нарушается
+console.log(shiftAnim);
+console.log(animals);
+
